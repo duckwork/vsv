@@ -430,7 +430,7 @@ while getopts 'c:d:hltuvV' option; do
 		h) do_usage=0;;
 		l) log=true; cmd='status';;
 		t) tree=true; cmd='status';;
-		u) SVDIR=~/runit/service;;
+		u) SVDIR=${VSV_SVDIR:-$HOME/runit/service};;
 		v) ((verbosity++));;
 		V) echo "$VSV_VERSION"; exit 0;;
 		*) do_usage=1;;
